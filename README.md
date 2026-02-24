@@ -1,5 +1,5 @@
 # Juego-Carrera
-Juegos simple en pygame de tiempos de vuelta en el circuito de Baréin.
+Juego simple en pygame de tiempos de vuelta en el circuito de Baréin.
 
 En relese se encuentra el zip con la carpeta con el ejecutable.
 
