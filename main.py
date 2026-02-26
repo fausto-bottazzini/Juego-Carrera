@@ -97,7 +97,7 @@ while running:
     # ---- META ----
     on_finish = track.crossed_line(car.prev_position, car.position, track.finish_line)
     if on_finish and not car.on_finish_last_frame:
-        # Primera vez → iniciar carrera
+        # Primera vez - iniciar carrera
         if not car.race_started:
             car.race_started = True
             car.lap_time = 0
@@ -139,7 +139,7 @@ while running:
                         }
                         def save_telemetry_async(data):   # Función que corre en paralelo
                             with open("best_lap_record.json", "w") as f:
-                                json.dump(data, f)  # Sacamos el indent=4 para que escriba más rápido
+                                json.dump(data, f) 
                             print("¡Telemetría guardada en background!")
                         # Disparar el hilo para evitar el lag
                         threading.Thread(target=save_telemetry_async, args=(telemetry_data,)).start()
@@ -195,3 +195,4 @@ while running:
 pygame.quit()
 
 show_session_telemetry()
+
